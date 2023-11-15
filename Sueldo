@@ -1,0 +1,21 @@
+def calcular_sueldo():
+  while True:
+    respuesta = input(" ¿Hay otro vendedor a calcular? (si/no):").lower()
+    if respuesta != "si":
+      break
+
+nombre = input("Ingrese el nombre del vendedor:")
+salario_base = float(input("Ingrese el salario base del vendedor: "))
+ventas = float(input("Ingrese el total de ventas realizadas por el vendedor: "))
+
+if ventas < 3500:
+  comision = ventas * 0.07
+elif 3500 <= ventas < 7000: 
+ comision = ventas * 0.10
+else: 
+  comision = ventas * 0.15
+
+sueldo_total = salario_base + comision
+print(f"\nNombre del vendedor: {nombre}")
+print(f"Sueldo total: {sueldo_total}")
+
